@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1096.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane layoutX="56.0" layoutY="92.0" prefHeight="484.0" prefWidth="990.0" style="-fx-background-color: #E9E9E9;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Personuppgifter">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="Närvaro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Statistik">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Anteckningar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="addComment_id" layoutX="19.0" layoutY="59.0" prefHeight="118.0" prefWidth="957.0" promptText="Skriv kommentar . . . . . . . . . " wrapText="true" />
+                        <Button fx:id="btnDelete" layoutX="909.0" layoutY="188.0" mnemonicParsing="false" onAction="#deleteComment" text="Avbryt" />
+                        <Button fx:id="btnAdd" layoutX="801.0" layoutY="188.0" mnemonicParsing="false" onAction="#publiceraComment" text="Publicera" />
+                        <ListView fx:id="displayComment_id" layoutX="21.0" layoutY="226.0" prefHeight="200.0" prefWidth="954.0" style="-fx-background-color: #ffff;" />
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="36.0" prefWidth="61.0" text="Namn" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="1002.0" layoutY="37.0" mnemonicParsing="false" text="Kontor" />
+      <Button layoutX="903.0" layoutY="37.0" mnemonicParsing="false" text="Handledare" />
+      <Button layoutX="814.0" layoutY="37.0" mnemonicParsing="false" text="Deltagare" />
+      <Button layoutX="230.0" layoutY="37.0" mnemonicParsing="false" text="Närvaro" />
+      <Text layoutX="56.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a-reco" wrappingWidth="138.32910549640656">
+         <font>
+            <Font size="40.0" />
+         </font></Text>
+      <DatePicker layoutX="540.0" layoutY="37.0" />
+      <SplitMenuButton layoutX="354.0" layoutY="36.0" mnemonicParsing="false" text="Välj kontor">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Välingby" />
+          <MenuItem mnemonicParsing="false" text="Liljeholmen" />
+            <MenuItem mnemonicParsing="false" text="Nörrtälje" />
+        </items>
+      </SplitMenuButton>
+   </children>
+</Pane>
